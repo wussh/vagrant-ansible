@@ -2,7 +2,7 @@
 
 ## Overview
 
-Briefly describe the purpose and scope of your Ansible project.
+Simple NGINX Ansible project.
 
 ## Usage
 
@@ -31,12 +31,28 @@ Ensure SSH connectivity to all hosts:
 ansible -i inventory/vagrant all -a "df -h"
 ```
 
+### Check Vagrant Status
+
+Check the status of Vagrant:
+
+```bash
+vagrant status
+```
+
 ### Execute Nginx Playbook
 
 Run the nginx playbook:
 
 ```bash
 ansible-playbook -i inventory/vagrant provision/nginx.yaml
+```
+
+### Cleanup Vagrant
+
+To clean up Vagrant resources:
+
+```bash
+vagrant destroy -f
 ```
 
 ## Roles
